@@ -1,11 +1,14 @@
-import _ from 'lodash'
-function component() {
-  let element = document.createElement('div');
+  import _ from 'lodash';
+  import './style.css';
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+  function component() {
+    var element = document.createElement('div');
 
-  return element;
-}
+    // Lodash, now imported by this script
+    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+    element.classList.add('hello');
 
-document.body.appendChild(component());
+    return element;
+  }
+
+  document.body.appendChild(component());
