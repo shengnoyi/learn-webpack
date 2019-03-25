@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "郑嘉伟 <ashudeyouxi@sina.cn>",
   "license": "MIT",
+  "scripts": {
+    "dev": "webpack"
+  },
   "devDependencies": {
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0"
