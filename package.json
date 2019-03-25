@@ -5,7 +5,8 @@
   "author": "郑嘉伟 <ashudeyouxi@sina.cn>",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack --config webpack.config.js"
+    "dev": "webpack --config webpack.config.js",
+    "watch": "webpack --watch"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^2.0.1",
