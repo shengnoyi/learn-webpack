@@ -9,6 +9,9 @@ module.exports = {
         app: './src/index.js',
         print: './src/print.js'
     },
+    devServer: {
+        contentBase: './dist'
+    },
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
