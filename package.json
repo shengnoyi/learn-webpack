@@ -1,5 +1,6 @@
 {
   "name": "learn-webpack",
+  "sideEffects": false,
   "version": "1.0.0",
   "main": "index.js",
   "author": "<ashudeyouxi@sina.cn>",
@@ -8,7 +9,7 @@
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "server": "node server.js",
-    "watch": "webpack --watch"
+    "watch": "webpack --config webpack.prod.js --watch"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^2.0.1",
