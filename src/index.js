@@ -13,11 +13,15 @@ function component() {
     // Note that because a network request is involved, some indication
     // of loading would need to be shown in a production-level site/app.
     button.onclick = async (e) => {
-        const module = await import(/* webpackChunkName: "print", webpackPrefetch: true */ './print')
-        var print = module.default;
-        print();
+        // the vendor file's content hash changes when i add webpackChunkName
+        const module = await import(
+            /* webpackPrefetch: true */
+            './print')
+        var print = module.print;
+        print('hello webpack');
     }
 
+    console.log('test')
     return element;
 }
 
