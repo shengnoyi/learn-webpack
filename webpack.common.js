@@ -2,6 +2,7 @@ const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Visualizer = require('webpack-visualizer-plugin');
+const webpack = require('webpack')
 
 module.exports = {
   entry: {
@@ -14,6 +15,9 @@ module.exports = {
     }),
     new Visualizer({
       filename: 'stat/visulizer.html',
+    }),
+    new webpack.ProvidePlugin({
+      join: ['lodash', 'join']
     })
   ],
   output: {
@@ -23,14 +27,14 @@ module.exports = {
   },
   optimization: {
     runtimeChunk: 'single',
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-	  test: /[\\/]node_modules[\\/]/,
-	  name: 'vendors',
-	  chunks: 'all',
-	}
-      }
-    }
+    // splitChunks: {
+    //   cacheGroups: {
+    //     vendor: {
+    //       test: /[\\/]node_modules[\\/]/,
+    //       name: 'vendors',
+    //       chunks: 'all',
+    //     }
+    //   }
+    // }
   }
 };

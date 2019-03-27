@@ -1,4 +1,3 @@
-import _ from 'lodash';
 
 function component() {
     var element = document.createElement('div');
@@ -6,7 +5,7 @@ function component() {
     var br = document.createElement('br');
 
     button.innerHTML = 'Click me and look at the console!';
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+    element.innerHTML = join(['Hello', 'webpack'], ' ');
     element.appendChild(br);
     element.appendChild(button);
 
